@@ -1,0 +1,50 @@
+﻿<Window x:Class="Library_project.UsersAdminPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_project"
+        mc:Ignorable="d"
+        Title="AllUsers" Height="564" Width="800">
+    <Grid Background="#F2F2F2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dtgAllusers" CanUserAddRows="False" AutoGenerateColumns="False" SelectionMode="Single" Margin="10,10,10,59" Grid.Column="0" Background="White" BorderBrush="#CCCCCC" BorderThickness="1" SelectionChanged="dtgAllusers_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="StudentNo" Header="Student No" Binding="{Binding StudentNo}" Width="Auto" />
+                <DataGridTextColumn x:Name="FullName" Header="full Name" Binding="{Binding FullName}" Width="Auto" />
+                <DataGridTextColumn x:Name="Email" Header="Email" Binding="{Binding Email}" Width="Auto" />
+                <DataGridTextColumn x:Name="CurrentRank" Header="Current Rank" Binding="{Binding CurrentRank}" Width="Auto" />
+                <DataGridTextColumn x:Name="RegistrationDate" Header="Registration Date" Binding="{Binding RegistrationDate}" Width="Auto" />
+                <DataGridTextColumn x:Name="AllowedBooksCount" Header="Allowed Books" Binding="{Binding AllowedBooksCount}" Width="Auto" />
+                <DataGridTextColumn x:Name="BookReturnPeriod" Header="Return Period" Binding="{Binding BookReturnPeriod}" Width="Auto" />
+                <DataGridTextColumn x:Name="BorrowedBooksCount" Header="Borrowed Books" Binding="{Binding BorrowedBooksCount}" Width="Auto" />
+                <DataGridTextColumn x:Name="BooksPastDue" Header="Books Past Due" Binding="{Binding BooksPastDue}" Width="Auto" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Search:" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="19,0,0,35" />
+        <TextBox x:Name="txtSearch" Width="200" TextChanged="txtSearch_TextChanged" Margin="72,0,0,36" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+
+        <StackPanel Grid.Column="1" Margin="0,0,10,10" Background="White">
+            <Label Content="Student Name" Margin="5,10,5,0" />
+            <TextBox x:Name="txtUserFullName" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <Label Content="Student allowed books" Margin="5,10,5,0" />
+            <TextBox x:Name="txtAllowedBookesCount" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <Label Content="Student allowed period" Margin="5,10,5,0" />
+            <TextBox x:Name="txtBookReturnPeriod" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <Label Content="Student email" Margin="5,10,5,0" />
+            <TextBox x:Name="txtEmail" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <Label Content="Student Rank" Margin="5,10,5,0" />
+            <TextBox x:Name="txtUserCurrentRank" Height="26" Margin="5" TextWrapping="Wrap" Text=""  BorderBrush="#CCCCCC" BorderThickness="1" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,3,5,0" Height="265">
+                <Button x:Name="btnDelete" Content="Delete" Width="66" Click="btnDelete_Click" Background="#F44336" Foreground="White" BorderBrush="#F44336" BorderThickness="1" Height="21" />
+                <Button x:Name="btnEdit" Content="Edit" Width="72" Margin="5,0,0,0" Click="btnEdit_Click" Background="#2196F3" Foreground="White" BorderBrush="#2196F3" BorderThickness="1" Height="21" />
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="btnBack" Content="Back" FontSize="14" Background="#CCCCCC" BorderBrush="#CCCCCC" BorderThickness="1" Click="btnBack_Click" Margin="505,500,52,10" />
+    </Grid>
+</Window>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="Library_project.AllBooksW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_project"
+        mc:Ignorable="d"
+        Title="All Books Admin" Height="564" Width="800">
+    <Grid Background="#F2F2F2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dtgAllBooks" CanUserAddRows="False" AutoGenerateColumns="False" SelectionMode="Single" Margin="10,10,10,59" Grid.Column="0" Background="White" BorderBrush="#CCCCCC" BorderThickness="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="BookId" Header="Id" Binding="{Binding BookId}" IsReadOnly="True" Width="Auto" />
+                <DataGridTextColumn x:Name="Writer" Header="Writer" Binding="{Binding Writer}" Width="Auto" />
+                <DataGridTextColumn x:Name="BookName" Header="Name" Binding="{Binding BookName}" Width="Auto" />
+                <DataGridTextColumn x:Name="AllBooks" Header="Quantity" Binding="{Binding TotalBooks}" Width="Auto" />
+                <DataGridTextColumn x:Name="Quantity" Header="Available Quantity" Binding="{Binding Quintity}" Width="Auto" />
+                <DataGridTextColumn x:Name="NumberOfPages" Header="Pages" Binding="{Binding NumberOfPages}" Width="Auto" />
+                <DataGridTextColumn x:Name="PublishingYear" Header="Year" Binding="{Binding PublishingYear}" Width="Auto" />
+                <DataGridTextColumn x:Name="Category" Header="Category" Binding="{Binding Category}" Width="Auto" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button x:Name="btnPrev" Content="◄" Width="24" Margin="234,0,0,11" Click="btnPrev_Click" FontSize="12" Background="#CCCCCC" Foreground="White" BorderBrush="#CCCCCC" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+       
+        <Button x:Name="btnNext" Content="►" Width="24" Margin="0,0,234,11" Click="btnNext_Click" FontSize="12" Background="#CCCCCC" Foreground="White" BorderBrush="#CCCCCC" BorderThickness="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+
+        <ComboBox x:Name="cbmPages" Margin="10,0,10,10" FontSize="12" Background="White" BorderBrush="#CCCCCC" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+
+        <Label Content="Search:" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="19,0,0,35" />
+        <TextBox x:Name="txtSearch" Width="200" TextChanged="txtSearch_TextChanged" Margin="72,0,0,36" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+
+        <StackPanel Grid.Column="1" Margin="10" Background="White">
+            <Label Content="Book Writer" Margin="5" />
+            <TextBox x:Name="txtWriter" Height="26" Margin="5" TextWrapping="Wrap" Text="" />
+            <Label Content="Category" Margin="5,10,5,0" />
+            <TextBox x:Name="txtCategory" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <Label Content="Year" Margin="5,10,5,0" />
+            <TextBox x:Name="txtYear" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <Label Content="Pages" Margin="5,10,5,0" />
+            <TextBox x:Name="txtPages" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <Label Content="Quantity" Margin="5,10,5,0" />
+            <TextBox x:Name="txtQuantity" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <Label Content="Book Name" Margin="5,10,5,0" />
+            <TextBox x:Name="txtBookName" Height="26" Margin="5" TextWrapping="Wrap" Text="" BorderBrush="#CCCCCC" BorderThickness="1" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5,20,5,0">
+                <Button x:Name="btnDelete" Content="Delete" Width="66" Margin="5,0,5,0" Click="btnDelete_Click" Background="#F44336" Foreground="White" BorderBrush="#F44336" BorderThickness="1" Height="27" />
+                <Button x:Name="btnAdd" Content="Add" Width="72" Click="btnAdd_Click" Background="#4CAF50" Foreground="White" BorderBrush="#4CAF50" BorderThickness="1" Height="28" />
+                <Button x:Name="btnEdit" Content="Edit" Width="72" Margin="5,0,0,0" Click="btnEdit_Click" Background="#2196F3" Foreground="White" BorderBrush="#2196F3" BorderThickness="1" Height="27" />
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="btnBack" Content="Back" FontSize="14" Background="#CCCCCC" BorderBrush="#CCCCCC" BorderThickness="1" Click="btnBack_Click" Margin="436,494,28,10" />
+    </Grid>
+</Window>

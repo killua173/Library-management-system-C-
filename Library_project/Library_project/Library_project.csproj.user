@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AdminW.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AllBooksW.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BarrowedBooksAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BarrowedBooksW.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LogInW.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegistrationW.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersAdminPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersApprovalRequests.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersW.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AdminW.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AllBooksW.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BarrowedBooksAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BarrowedBooksW.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LogInW.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RegistrationW.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersAdminPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersApprovalRequests.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UsersW.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

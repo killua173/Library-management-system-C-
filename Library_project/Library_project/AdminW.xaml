@@ -1,0 +1,48 @@
+﻿<Window x:Class="Library_project.AdminW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_project"
+   mc:Ignorable="d"
+        Title="Library Dashboard" Height="450" Width="800">
+    <Grid Background="#F2F2F2">
+        <Button x:Name="btnUsersNeedApproval" Content="Rank Approval Requests" HorizontalAlignment="Left" Height="50" Width="200" Margin="30,50,0,0" VerticalAlignment="Top" Background="#2979FF" Foreground="White" FontSize="16" BorderThickness="0" Click="btnUsersNeedApproval_Click" BorderBrush="{x:Null}">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btBorrowedBooks" Content="Borrowed Books" HorizontalAlignment="Left" Height="50" Width="120" Margin="260,50,0,0" VerticalAlignment="Top" Background="#FF6D00" Foreground="White" FontSize="16" BorderThickness="0" Click="btBorrowedBooks_Click" BorderBrush="{x:Null}">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="AbtnllUseres" Content="All Users" HorizontalAlignment="Left" Height="50" Width="120" Margin="422,50,0,0" VerticalAlignment="Top" Background="#FF4081" Foreground="White" FontSize="16" BorderThickness="0" Click="AbtnllUseres_Click" BorderBrush="{x:Null}">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnAllBooks" Content="All Books" HorizontalAlignment="Left" Height="50" Width="120" Margin="590,50,0,0" VerticalAlignment="Top" Background="#00BFA5" Foreground="White" FontSize="16" BorderThickness="0" Click="btnAllBooks_Click" BorderBrush="{x:Null}">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="logOutBtn" Content="Log Out" Margin="115,328,585,59" FontSize="14" Background="#F44336" Foreground="White" BorderBrush="#F44336" BorderThickness="1" Click="logOutBtn_Click" />
+    </Grid>
+</Window>
